@@ -3,3 +3,9 @@ build
 .idea
 *.iml
 .gradle
+
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
