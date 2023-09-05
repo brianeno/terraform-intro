@@ -13,8 +13,8 @@ provider "aws" {
   region = var.region
 }
 
-resource "aws_instance" "section6_vm" {
-  ami           = var.ami //Ubuntu AMI
+resource "aws_instance" "section6a_vm" {
+  ami           = var.ami
   instance_type = var.instance_type
 
   tags = {

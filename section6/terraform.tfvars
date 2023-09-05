@@ -1,6 +1,3 @@
 region = "us-west-2"
-name_tag  = "My Section 3 Instance"
-ami = "ami-0c65adc9a5c1b5d7c"
-instance_type = "t2.micro"
 bucket_name = "bucket-ti-brianeno"
 table_name = "table-ti-brianeno"

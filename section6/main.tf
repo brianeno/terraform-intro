@@ -6,9 +6,11 @@ resource "aws_s3_bucket" "section6_state" {
 
   bucket = var.bucket_name
 
-  // This is only here so we can destroy the bucket in our atcvile.
   // You should not copy this for production SCENARIOS
   force_destroy = true
+  tags = {
+    Name = "S3 Remote TF State Store"
+  }
 }
 
 # Enable versioning so you can see the history of your state
@@ -47,6 +49,9 @@ resource "aws_dynamodb_table" "section6_locks" {
   attribute {
     name = "LockID"
     type = "S"
+  }
+  tags = {
+    "Name" = "DynamoDB State Lock Table"
   }
 }
 
